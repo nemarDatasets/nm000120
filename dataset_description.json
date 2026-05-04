@@ -1,53 +1,55 @@
 {
-	"Name": "Oikonomou2016 – SSVEP MAMEM 2 dataset",
-	"BIDSVersion": "1.9.0",
-	"HEDVersion": "8.4.0",
-	"DatasetType": "derivative",
-	"License": "ODC-By-1.0",
-	"Authors": [
-		"Vangelis P. Oikonomou",
-		"Georgios Liaros",
-		"Kostantinos Georgiadis",
-		"Elisavet Chatzilari",
-		"Katerina Adam",
-		"Spiros Nikolopoulos",
-		"Ioannis Kompatsiaris"
-	],
-	"Funding": [
-		"H2020-ICT-2014-644780"
-	],
-	"EthicsApprovals": [
-		"Approved by ethics committee of Centre for Research and Technology Hellas, date 3/7/2015, grant H2020-ICT-2014-644780"
-	],
-	"ReferencesAndLinks": [
-		"https://figshare.com/articles/dataset/3153409",
-		"arXiv:1602.00904v2"
-	],
-	"GeneratedBy": [
-		{
-			"CodeURL": "https://github.com/NeuroTechX/moabb",
-			"Name": "moabb",
-			"Description": "Mother of All BCI Benchmarks",
-			"Version": "1.4.3"
-		}
-	],
-	"SourceDatasets": [
-		{
-			"DOI": "10.48550/arXiv.1602.00904",
-			"URL": "https://figshare.com/articles/dataset/3153409"
-		}
-	],
-	"Keywords": [
-		"SSVEP",
-		"BCI",
-		"brain-computer interface",
-		"EEG",
-		"visual evoked potentials",
-		"signal processing",
-		"feature extraction",
-		"classification"
-	],
-	"PublicationYear": 2016,
-	"ExperimentName": "Oikonomou2016",
-	"Description": "SSVEP MAMEM 2 dataset.\n\n\nDataset summary:\n\n#Subj     10\n#Chan    256\n#Classes      5\n#Trials / class  20-30\nTrials length    3 s\nFreq 250 Hz\n#Sessions      1\n\n\nParticipants:\n\n- Population: healthy\n- Handedness: {'right': 10, 'left': 1}\n\n\nEquipment:\n\n- Amplifier: EGI 300 Geodesic EEG System (GES 300)\n- Montage: GSN-HydroCel-256\n- Reference: Cz\n\n\nPreprocessing:\n\n- Data state: raw\n\n\nData Access:\n\n- DOI: 10.48550/arXiv.1602.00904\n- Data URL: https://figshare.com/articles/dataset/3153409\n- Repository: GitHub\n\n\nExperimental Protocol:\n\n- Paradigm: ssvep\n- Feedback: none\n- Stimulus: flickering box\n\nDataset from [1]_. Data acquisition details are documented in [3]_.\n\nEEG signals with 256 channels captured from 11 subjects executing a\nSSVEP-based experimental protocol. Five different frequencies\n(6.66, 7.50, 8.57, 10.00 and 12.00 Hz) have been used for the visual\nstimulation,and the EGI 300 Geodesic EEG System, using a\nstimulation, HydroCel Geodesic Sensor Net (HCGSN) and a sampling rate of\n250 Hz has been used for capturing the signals.\n\nSubjects were exposed to flickering lights from five violet boxes with\nfrequencies [6.66Hz, 7.5Hz, 8.57Hz, 10Hz, and 12Hz] simultaneously. Prior\nto and during each flicking window, one of the boxes is marked by a yellow\narrow indicating the box to be focused on by the subject. 256 channel EEG\nrecordings were captured.\n\nFrom [2]_, each subject underwent a single adaptation period before the first of\ntheir 5 sessions (unlike experiment 1 in which each session began with its own\nadaptation period). In the adaptation period, the subject is exposed to ten\n5-second flickering windows from the five boxes simultaneously, with the\ntarget frequencies specified in the FREQUENCIES2.txt file under\n'adaptation'. The flickering windows are separated by 5 seconds of rest,\nand the 100s adaptation period precedes the first session by 30 seconds.\n\nEach session consisted of the following:\nFor the series of frequencies specified in the FREQUENCIES2.txt file under\n'sessions':\nA 5 second window with all boxes flickering and the subject focusing\non the specified frequency's marked box, followed by 5 seconds of rest.\nThis gives a total of 25 flickering windows for each session (not\nincluding the first adaptation period). Five minutes of rest before\nthe next session (not including the 5th session).\n\nThe order of chosen frequencies is the same for each session, although\nthere are small-moderate variations in the actual frequencies of each\nindividual window.\nNote: Each 'session' in experiment 1 includes an adaptation period,\nunlike experiment 2 and 3 where each subject undergoes only one adaptation\nperiod before their first 'session'.\n\nWaveforms and Annotations\nFile names are in the form T0NNn, where NN is the subject number and n is\na - e for the session letter or x for the adaptation period. Each session\nlasts in the order of several minutes and is sampled at 250Hz. Each session\nand adaptation period has the following files:\nA waveform file of the EEG signals (.dat) along with its header file\n(.hea). If the channel corresponds to an international 10-20 channel then\nit is labeled as such. Otherwise, it is just labeled 'EEG'. An annotation\nfile (.flash) containing the locations of each individual flash. An\nannotation file (.win) containing the locations of the beginning and end\nof each 5 second flickering window. The annotations are labeled as '(' for\nstart and ')' for stop, along with auxiliary strings indicating the focal\nfrequency of the flashing windows.\n\nThe FREQUENCIES2.txt file indicates the approximate marked frequencies of\nthe flickering windows, equal for each session, adaptation, and subject.\nThese values are equal to those contained in the .win annotations.\n\nObserved  artifacts:\nDuring the  stimulus  presentation  to  subject  S007  the  research stuff\nnoted that the subject had a tendency to eye blink. As a result the\ninterference, in matters of artifacts, on the recorded signal is expected\nto be high.\n\nReferences\n----------\n.. [1] Oikonomou, V. P., Liaros, G., Georgiadis, K., Chatzilari, E., Adam, K.,\nNikolopoulos, S., & Kompatsiaris, I. (2016). Comparative evaluation of\nstate-of-the-art algorithms for SSVEP-based BCIs. arXiv preprint\narXiv:1602.00904.\n.. [2] MAMEM Steady State Visually Evoked Potential EEG Database\n`<https://archive.physionet.org/physiobank/database/mssvepdb/>`_\n.. [3] S. Nikolopoulos, 2016, DataAcquisitionDetails.pdf\n`<https://figshare.com/articles/dataset/MAMEM_EEG_SSVEP_Dataset_II_256_channels_11_subjects_5_frequencies_presented_simultaneously_/3153409?file=4911931>`_"
+  "Name": "Oikonomou2016 – SSVEP MAMEM 2 dataset",
+  "BIDSVersion": "1.9.0",
+  "HEDVersion": "8.4.0",
+  "DatasetType": "derivative",
+  "License": "ODC-By-1.0",
+  "Authors": [
+    "Vangelis P. Oikonomou",
+    "Georgios Liaros",
+    "Kostantinos Georgiadis",
+    "Elisavet Chatzilari",
+    "Katerina Adam",
+    "Spiros Nikolopoulos",
+    "Ioannis Kompatsiaris"
+  ],
+  "Funding": [
+    "H2020-ICT-2014-644780"
+  ],
+  "EthicsApprovals": [
+    "Approved by ethics committee of Centre for Research and Technology Hellas, date 3/7/2015, grant H2020-ICT-2014-644780"
+  ],
+  "ReferencesAndLinks": [
+    "https://figshare.com/articles/dataset/3153409",
+    "arXiv:1602.00904v2"
+  ],
+  "GeneratedBy": [
+    {
+      "CodeURL": "https://github.com/NeuroTechX/moabb",
+      "Name": "moabb",
+      "Description": "Mother of All BCI Benchmarks",
+      "Version": "1.4.3"
+    }
+  ],
+  "SourceDatasets": [
+    {
+      "DOI": "10.48550/arXiv.1602.00904",
+      "URL": "https://figshare.com/articles/dataset/3153409"
+    }
+  ],
+  "Keywords": [
+    "SSVEP",
+    "BCI",
+    "brain-computer interface",
+    "EEG",
+    "visual evoked potentials",
+    "signal processing",
+    "feature extraction",
+    "classification"
+  ],
+  "PublicationYear": 2016,
+  "ExperimentName": "Oikonomou2016",
+  "Description": "SSVEP MAMEM 2 dataset.\n\n\nDataset summary:\n\n#Subj     10\n#Chan    256\n#Classes      5\n#Trials / class  20-30\nTrials length    3 s\nFreq 250 Hz\n#Sessions      1\n\n\nParticipants:\n\n- Population: healthy\n- Handedness: {'right': 10, 'left': 1}\n\n\nEquipment:\n\n- Amplifier: EGI 300 Geodesic EEG System (GES 300)\n- Montage: GSN-HydroCel-256\n- Reference: Cz\n\n\nPreprocessing:\n\n- Data state: raw\n\n\nData Access:\n\n- DOI: 10.48550/arXiv.1602.00904\n- Data URL: https://figshare.com/articles/dataset/3153409\n- Repository: GitHub\n\n\nExperimental Protocol:\n\n- Paradigm: ssvep\n- Feedback: none\n- Stimulus: flickering box\n\nDataset from [1]_. Data acquisition details are documented in [3]_.\n\nEEG signals with 256 channels captured from 11 subjects executing a\nSSVEP-based experimental protocol. Five different frequencies\n(6.66, 7.50, 8.57, 10.00 and 12.00 Hz) have been used for the visual\nstimulation,and the EGI 300 Geodesic EEG System, using a\nstimulation, HydroCel Geodesic Sensor Net (HCGSN) and a sampling rate of\n250 Hz has been used for capturing the signals.\n\nSubjects were exposed to flickering lights from five violet boxes with\nfrequencies [6.66Hz, 7.5Hz, 8.57Hz, 10Hz, and 12Hz] simultaneously. Prior\nto and during each flicking window, one of the boxes is marked by a yellow\narrow indicating the box to be focused on by the subject. 256 channel EEG\nrecordings were captured.\n\nFrom [2]_, each subject underwent a single adaptation period before the first of\ntheir 5 sessions (unlike experiment 1 in which each session began with its own\nadaptation period). In the adaptation period, the subject is exposed to ten\n5-second flickering windows from the five boxes simultaneously, with the\ntarget frequencies specified in the FREQUENCIES2.txt file under\n'adaptation'. The flickering windows are separated by 5 seconds of rest,\nand the 100s adaptation period precedes the first session by 30 seconds.\n\nEach session consisted of the following:\nFor the series of frequencies specified in the FREQUENCIES2.txt file under\n'sessions':\nA 5 second window with all boxes flickering and the subject focusing\non the specified frequency's marked box, followed by 5 seconds of rest.\nThis gives a total of 25 flickering windows for each session (not\nincluding the first adaptation period). Five minutes of rest before\nthe next session (not including the 5th session).\n\nThe order of chosen frequencies is the same for each session, although\nthere are small-moderate variations in the actual frequencies of each\nindividual window.\nNote: Each 'session' in experiment 1 includes an adaptation period,\nunlike experiment 2 and 3 where each subject undergoes only one adaptation\nperiod before their first 'session'.\n\nWaveforms and Annotations\nFile names are in the form T0NNn, where NN is the subject number and n is\na - e for the session letter or x for the adaptation period. Each session\nlasts in the order of several minutes and is sampled at 250Hz. Each session\nand adaptation period has the following files:\nA waveform file of the EEG signals (.dat) along with its header file\n(.hea). If the channel corresponds to an international 10-20 channel then\nit is labeled as such. Otherwise, it is just labeled 'EEG'. An annotation\nfile (.flash) containing the locations of each individual flash. An\nannotation file (.win) containing the locations of the beginning and end\nof each 5 second flickering window. The annotations are labeled as '(' for\nstart and ')' for stop, along with auxiliary strings indicating the focal\nfrequency of the flashing windows.\n\nThe FREQUENCIES2.txt file indicates the approximate marked frequencies of\nthe flickering windows, equal for each session, adaptation, and subject.\nThese values are equal to those contained in the .win annotations.\n\nObserved  artifacts:\nDuring the  stimulus  presentation  to  subject  S007  the  research stuff\nnoted that the subject had a tendency to eye blink. As a result the\ninterference, in matters of artifacts, on the recorded signal is expected\nto be high.\n\nReferences\n----------\n.. [1] Oikonomou, V. P., Liaros, G., Georgiadis, K., Chatzilari, E., Adam, K.,\nNikolopoulos, S., & Kompatsiaris, I. (2016). Comparative evaluation of\nstate-of-the-art algorithms for SSVEP-based BCIs. arXiv preprint\narXiv:1602.00904.\n.. [2] MAMEM Steady State Visually Evoked Potential EEG Database\n`<https://archive.physionet.org/physiobank/database/mssvepdb/>`_\n.. [3] S. Nikolopoulos, 2016, DataAcquisitionDetails.pdf\n`<https://figshare.com/articles/dataset/MAMEM_EEG_SSVEP_Dataset_II_256_channels_11_subjects_5_frequencies_presented_simultaneously_/3153409?file=4911931>`_",
+  "DatasetDOI": "10.82901/nemar.nm000120",
+  "Version": "1.0.0"
 }
