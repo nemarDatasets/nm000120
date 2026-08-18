@@ -1,9 +1,9 @@
 {
   "version": "2.0",
-  "pipeline_stage": "enriched",
+  "pipeline_stage": "validated",
   "title": "Oikonomou2016 – SSVEP MAMEM 2 dataset",
-  "description": "A 256-channel EEG dataset from 11 healthy subjects performing a steady-state visually evoked potential (SSVEP) brain-computer interface task. Subjects focused attention on flickering visual stimuli at five different frequencies (6.66, 7.50, 8.57, 10.00, and 12.00 Hz) to select commands. The dataset includes 1,104 trials acquired at 250 Hz using an EGI 300 Geodesic EEG System and was used to systematically evaluate state-of-the-art signal processing and classification algorithms for SSVEP-based BCIs.",
-  "methods_description": "EEG signals were recorded from 11 healthy subjects (8 male, 3 female; age 24-39 years) using a 256-channel EGI 300 Geodesic EEG System (GSN-HydroCel-256 montage) at 250 Hz sampling rate with Cz reference. Subjects performed a visual attention task focusing on flickering boxes presented at five simultaneous frequencies. Each trial consisted of 5 seconds of visual stimulation followed by 5 seconds of rest. Data were acquired in raw format without preprocessing. Leave-one-subject-out cross-validation was employed for algorithm evaluation.",
+  "description": "A 256-channel EEG dataset from 11 healthy subjects performing a steady-state visually evoked potential (SSVEP) brain-computer interface task with five simultaneous flickering stimuli at frequencies of 6.66, 7.50, 8.57, 10.00, and 12.00 Hz. The dataset comprises 1,104 trials acquired at 250 Hz sampling rate using an EGI 300 Geodesic EEG System and was used for comparative evaluation of signal processing algorithms including filtering, artifact removal, feature extraction, and classification methods for SSVEP-based BCIs.",
+  "methods_description": "EEG signals were recorded from 11 healthy subjects (8 male, 3 female; age 24-39 years) using a 256-channel EGI 300 Geodesic EEG System with HydroCel Geodesic Sensor Net montage at 250 Hz sampling rate and Cz reference. Subjects performed an SSVEP task focusing on flickering visual stimuli presented at five frequencies (6.66, 7.50, 8.57, 10.00, 12.00 Hz) for 5-second trials separated by 5-second rest periods. Each subject completed one session with 5 runs. Leave-one-subject-out cross-validation was employed for algorithm evaluation across signal processing stages: filtering (FIR vs IIR), artifact removal (AMUSE vs FastICA), feature extraction (PWelch, Periodogram, PYULEAR, DWT, STFT, Goertzel), feature selection, and classification (SVM, LDA, kNN, Naive Bayes, Random Forest, AdaBoost).",
   "license": "ODC-By-1.0",
   "dataset_type": "derivative",
   "authors": {
@@ -20,13 +20,7 @@
       "term": "SSVEP"
     },
     {
-      "term": "MAMEM"
-    },
-    {
-      "term": "Brain-Computer Interfaces",
-      "subject_scheme": "MeSH",
-      "scheme_uri": "https://id.nlm.nih.gov/mesh/",
-      "value_uri": "http://id.nlm.nih.gov/mesh/D062207"
+      "term": "brain-computer interface"
     },
     {
       "term": "EEG"
@@ -41,7 +35,7 @@
       "term": "feature extraction"
     },
     {
-      "term": "classification"
+      "term": "classification algorithms"
     }
   ],
   "related_identifiers": [
@@ -89,5 +83,5 @@
     ".yaml",
     ".yml"
   ],
-  "source_hash": "17886f21d0bc1f8e5a87e585fff5a35eb426ad46fd22f8800aeb8ee94672d029"
+  "source_hash": "85c8043a308341a88855525c24731982c942b14bbc294a7409de046a726d1de6"
 }
