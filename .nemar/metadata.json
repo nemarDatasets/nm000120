@@ -2,8 +2,8 @@
   "version": "2.0",
   "pipeline_stage": "validated",
   "title": "Oikonomou2016 – SSVEP MAMEM 2 dataset",
-  "description": "A 256-channel EEG dataset from 11 healthy subjects performing an SSVEP-based brain-computer interface protocol. Participants focused on one of five violet boxes flickering simultaneously at 6.66, 7.50, 8.57, 10.00 and 12.00 Hz, with EEG recorded on an EGI 300 Geodesic system at 250 Hz. The dataset supports comparative evaluation of filtering, artifact removal, feature extraction, feature selection and classification algorithms for SSVEP-based BCIs.",
-  "methods_description": "EEG was recorded with an EGI 300 Geodesic EEG System (GES 300) and a 256-channel HydroCel Geodesic Sensor Net at 250 Hz, referenced to Cz. Stimuli were flickering boxes on a 22-inch LCD monitor at 60 Hz. Each 5 s flickering window, with the target box cued by an arrow, was followed by 5 s of rest. Each subject completed one adaptation period followed by up to five sessions.",
+  "description": "A 256-channel EEG dataset from 11 healthy participants performing an SSVEP-based brain-computer interface protocol. Participants viewed five simultaneously flickering boxes (6.66, 7.50, 8.57, 10.00 and 12.00 Hz) and focused on a cued target. Recordings were made with an EGI 300 Geodesic EEG System at 250 Hz. The dataset supports comparative evaluation of filtering, artifact removal, feature extraction and classification algorithms for SSVEP BCIs.",
+  "methods_description": "EEG was recorded with an EGI GES 300 amplifier and a 256-channel HydroCel Geodesic Sensor Net at 250 Hz, referenced to Cz. Stimuli were flickering violet boxes on a 22-inch LCD monitor (60 Hz refresh rate), with a yellow arrow marking the target box. After a single adaptation period of ten 5-second windows, each session contained 25 five-second flickering windows, each followed by 5 seconds of rest. Participants completed up to 5 sessions, with 5 minutes of rest between sessions.",
   "license": "ODC-By-1.0",
   "dataset_type": "derivative",
   "authors": {
@@ -20,19 +20,19 @@
       "term": "SSVEP"
     },
     {
-      "term": "brain-computer interface"
+      "term": "EEG"
     },
     {
-      "term": "EEG"
+      "term": "brain-computer interface"
     },
     {
       "term": "visual evoked potentials"
     },
     {
-      "term": "classification"
+      "term": "signal processing"
     },
     {
-      "term": "feature extraction"
+      "term": "classification"
     }
   ],
   "related_identifiers": [
@@ -85,5 +85,5 @@
     ".yaml",
     ".yml"
   ],
-  "source_hash": "85c8043a308341a88855525c24731982c942b14bbc294a7409de046a726d1de6"
+  "source_hash": "50aeb7502e047294533b935ab34c4bbee1cfb3147a99f528dc924eb6e5ff31de"
 }
