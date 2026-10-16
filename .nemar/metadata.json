@@ -2,8 +2,8 @@
   "version": "2.0",
   "pipeline_stage": "validated",
   "title": "Oikonomou2016 – SSVEP MAMEM 2 dataset",
-  "description": "A 256-channel EEG dataset from 11 healthy participants performing an SSVEP-based brain-computer interface protocol. Participants viewed five simultaneously flickering boxes (6.66, 7.50, 8.57, 10.00 and 12.00 Hz) and focused on a cued target. Recordings were made with an EGI 300 Geodesic EEG System at 250 Hz. The dataset supports comparative evaluation of filtering, artifact removal, feature extraction and classification algorithms for SSVEP BCIs.",
-  "methods_description": "EEG was recorded with an EGI GES 300 amplifier and a 256-channel HydroCel Geodesic Sensor Net at 250 Hz, referenced to Cz. Stimuli were flickering violet boxes on a 22-inch LCD monitor (60 Hz refresh rate), with a yellow arrow marking the target box. After a single adaptation period of ten 5-second windows, each session contained 25 five-second flickering windows, each followed by 5 seconds of rest. Participants completed up to 5 sessions, with 5 minutes of rest between sessions.",
+  "description": "A 256-channel EEG dataset from 11 healthy participants performing an SSVEP-based brain-computer interface protocol. Subjects attended to one of five simultaneously flickering boxes (6.66, 7.50, 8.57, 10.00, 12.00 Hz) while EEG was recorded at 250 Hz with an EGI GES 300 system. The dataset supports comparative evaluation of filtering, artifact removal, feature extraction and classification algorithms for SSVEP-based BCIs.",
+  "methods_description": "EEG was recorded with an EGI 300 Geodesic EEG System and a 256-channel HydroCel Geodesic Sensor Net at 250 Hz, referenced to Cz. Participants viewed five violet boxes flickering simultaneously at different frequencies on a 22-inch LCD monitor, with a yellow arrow marking the target box. Each 5 s flickering window was followed by 5 s of rest. Each subject completed a single adaptation period followed by up to five sessions.",
   "license": "ODC-By-1.0",
   "dataset_type": "derivative",
   "authors": {
@@ -17,10 +17,10 @@
   },
   "keywords": [
     {
-      "term": "SSVEP"
+      "term": "EEG"
     },
     {
-      "term": "EEG"
+      "term": "SSVEP"
     },
     {
       "term": "brain-computer interface"
@@ -29,10 +29,17 @@
       "term": "visual evoked potentials"
     },
     {
-      "term": "signal processing"
+      "term": "classification"
     },
     {
-      "term": "classification"
+      "term": "Brain-Computer Interfaces",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D062207"
+    },
+    {
+      "term": "Electroencephalography",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D004569"
     }
   ],
   "related_identifiers": [
@@ -85,5 +92,5 @@
     ".yaml",
     ".yml"
   ],
-  "source_hash": "50aeb7502e047294533b935ab34c4bbee1cfb3147a99f528dc924eb6e5ff31de"
+  "source_hash": "0acd30f74dfccc80b3258f4aeb6e0f74d1703049a4d5e988a11a4636fb341814"
 }
